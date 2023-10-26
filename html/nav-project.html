@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <link rel="stylesheet" href="/css/nav-project.css">
+    <link rel="stylesheet" href="/css/footer-prj.css">
+    <link rel="stylesheet" href="/css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="shortcut icon" href="/project_image/favicon.ico">
+    <script src="/project.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="sub-search">
+      <div  onclick=hideSubXmark() class="sub-xmark"><i class="fa-solid fa-xmark sub-xmark-icon"></i></div>
+      <input type="text" placeholder="Search here..."><i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="sub-head">
+      <div onclick="showSubHead()" class="icon-bars sub-head-item"><i class="fa-solid fa-bars"></i></div>
+      <div class="sub-head-logo">
+        <a href="project.html"><img src="/project_image/vpf.png" alt=""></a>
+      </div>
+      <div class="sub-head-right">
+        <a href="login-form-prj.html"><div class="sub-head-user sub-head-item"><i class="fa-solid fa-user"></i></div></a>
+        <div  onclick="showSubSearch()" class="sub-head-search sub-head-item">
+          <i class="fa-solid fa-magnifying-glass sub-glass"></i>
+        </div>
+      </div>
+    </div>
+    <div class="sub-menu">
+      <div onclick="closeSubHead()" class="sub-menu-head"><i class="fa-solid fa-xmark"></i></div>
+      <div class="sub-menu-content">
+        <ul class="sub-menu-list">
+          <li class="sub-active hover-list"><a href="#">Home</a></li>
+          <li class="hover-list"><a href="club.html">Clubs</a></li>
+          <li class="hover-list"><a href="sche2.html">Fixtures</a></li>
+          <li class="hover-list"><a href="#">News</a></li>
+          <li class="hover-list"><a href="table.html">Tables</a></li>
+          <li class="hover-list"><a href="stats.html">Stats</a></li>
+          <li class="hover-list"><a href="#">Highlights</a></li>
+          <input type="checkbox" name="check-menu" id="check-menu">
+          <li class="hover-list more-hover-list"><label for="check-menu">More <i class="fa-solid fa-caret-right sub-fa-caret-right"></i></label>
+            <ul class="sub-more">
+              <li class="sub-more-list"><a href="#donors">Nhà tài trợ</a></li>
+              <li class="sub-more-list"><a href="#">Cầu thủ của trận</a></li>
+              <li class="sub-more-list"><a href="#">Huấn luyện viên</a></li>
+              <li class="sub-more-list"><a href="#">Trọng tài</a></li>
+              <li class="sub-more-list"><a href="#">Câu hỏi thường gặp</a></li>
+              <li class="sub-more-list"><a href="#">Thư viện</a></li>
+              <li class="sub-more-list"><a href="#">Nhà tài trợ</a></li>
+              <li class="sub-more-list"><a href="#">Liên hệ với chúng tôi</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu-user"><a href="/login-form-prj.html"><i class="fa-solid fa-user"></i> LOGIN</a></li>        
+        </ul>
+      </div>
+    </div>
+    <header class="masthead">
+      <nav class="clubNavigation">
+        <h4 class="clubSiteHeader">Club Sites <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+        <ul class="clubList">
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/binh-duong-2021-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/cong-an-ha-noi-fc-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/haiphongfc-150x150.jpg" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/HNFC-6-sao-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/HAGL-150x150.jpg" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/Logo-Ha-Tinh-update-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/Khanh-Hoa-FC-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/Logo-CLB-Dong-A-Thanh-Hoa_chuan-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/Quang-Nam-150x150.jpg" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/HCM-FC-2023-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/Logo-Viettel-FC-JPG-150x150.jpg" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/Nam-Dinh-150x150.jpg" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/slna-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+          <li class="clubList__club"><a href="#" class="clubList__link" target="_blank">
+              <div class="badge-image-container">
+                <a href="#"><img src="/project_image/Binh-Dinh-150x150.png" alt=""></a>
+              </div>
+            </a></li>
+        </ul>
+      </nav>
+      <div class="logo-container">
+        <a href="/project.html">
+          <div class="logo">
+            <img src="/project_image/project_image.png" alt="">
+        </a>
+      </div>
+      <div class="navContainer">
+        <ul class="nav-list">
+          <li class="active"><a href="/project.html">Home</a></li>
+          <li><a href="club.html">Clubs</a></li>
+          <li><a href="/sche2.html">Fixtures</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="/table.html">Tables</a></li>
+          <li><a href="stats.html">Stats</a></li>
+          <li><a href="#">Highlight</a></li>
+        </ul>
+        <div class="navContainer-right">
+          <div class="navContainer-more">
+            <p>More <i class="fa-solid fa-caret-up fa-rotate-180"></i></p>
+            <ul class="submore">
+              <li><a href="#donors">Nhà tài trợ</a></li>
+              <li><a href="#">Cầu thủ của trận</a></li>
+              <li><a href="#">Huấn luyện viên</a></li>
+              <li><a href="#">Trọng tài</a></li>
+              <li><a href="#">Câu hỏi thường gặp</a></li>
+              <li><a href="#">Thư viện</a></li>
+              <li><a href="#">Nhà tài trợ</a></li>
+              <li><a href="#">Liên hệ với chúng tôi</a></li>
+            </ul>
+          </div>
+          <div class="divider divider-1"></div>
+          <div class="navContainer-user"><a href="/login-form-prj.html"><i class="fa-solid fa-user"></i></a></div>
+          <div class="divider"></div>
+          <div class="navContainer-search">
+            <i id="search-btn" class="fa-solid fa-magnifying-glass"
+              onclick=showSearch()></i>
+            <i id="xmark-btn" class="fa-solid fa-xmark fa-xmark-search" onclick=showXmark()></i>
+          </div>
+        </div>
+      </div>
+      </div>
+    </header>
+    <!-- End header -->
+    <div class="hightlight">
+      <h1>Hightlight</h1>
+      <div class="hightlight-image">
+        <img src="/images/background-heading.png" alt="">
+      </div>
+    </div>
+    <div class="hightlight-container">
+      <h2 class="more">Hightlights & Khoảnh Khắc</h2>
+        <a class="more-a" href="https://www.youtube.com/@v.league.official"><p>Xem thêm</p></a>
+    </div>
+    <div class="video-container">
+      
+    </div>
+    <!-- body -->
+    <div id="donors" class="donors-container">
+      <div class="main-dn">
+        <div class="main-dn-img">
+          <a href="https://caspervietnam.vn/"><img src="/project_image/donors-1.png" alt=""></a>
+        </div>
+        <div class="main-dn-img">
+          <a href="https://samngoclinhkontum.com/gioi-thieu/"><img src="/project_image/donors-2.png" alt=""></a>
+        </div>
+        <div class="main-dn-img">
+          <a href="https://savabeco.com.vn/"><img src="/project_image/donors-3.png" alt=""></a>
+        </div>
+      </div>
+      <div class="divide-dn"></div>
+      <div class="sub-dn">
+        <div class="sub-dn-img">
+          <a href="https://fptplay.vn/"><img src="/project_image/donors-4.png" alt=""></a>
+        </div>
+        <div class="sub-dn-img">
+          <a href="https://dongluc.vn/"><img src="/project_image/donors-5.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <!-- body -->
+    <!-- Footer -->
+  <footer>
+    <div class="footer-header">
+      <ul class="footer-header-list">
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="#">Hỏi đáp</a></li>
+        <li><a href="#">Cơ hội nghề nghiệp</a></li>
+        <li><a href="#">Chính sách bảo mật</a></li>
+        <li><a href="#">Điều khoản sử dụng</a></li>
+        <li><a href="#">Đối tác</a></li>
+      </ul>
+    </div>
+    <div class="footer-content">
+      <div class="follow-us">
+        <div class="follow-us-list">
+          <div data-count="Facebook" class="follow-us-item"><a target="_blank" href="https://www.facebook.com/VPFMedia"><i class="fa-brands fa-facebook" style="color: #006eff;"></i></a></div>
+          <div data-count="Tiktok" class="follow-us-item"><a target="_blank" href="https://www.tiktok.com/@v.leagueofficial"><i class="fa-brands fa-tiktok" style="color: #000000"></i></a></div>
+          <div data-count="Youtube" class="follow-us-item"><a target="_blank" href="https://www.youtube.com/user/Vpfmedia"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i></a></div>
+          <div data-count="Twitter" class="follow-us-item"><a target="_blank" href="https://twitter.com/vnleague"><i class="fa-brands fa-twitter" style="color: #005eff;"></i></a></div>
+        </div>
+      </div>
+      <div class="footer-content-infor">
+        <div class="fci-fci">
+          <div class="fci-item">
+            <div class="fci-img">
+              <img src="/project_image/Don-vi.png" alt="">
+            </div>
+            <div class="fci-text">
+              <p>ĐƠN VỊ CHỦ QUẢN</p>
+              <p>Công ty cổ phần bóng đá chuyên nghiệp Việt Nam (VPF)</p>
+            </div>
+          </div>
+          <div class="fci-item">
+            <div class="fci-img">
+              <img src="/project_image/diaChi.png" alt="">
+            </div>
+            <div class="fci-text">
+              <p>ĐỊA CHỈ</p>
+              <p>Tầng 3, Tòa nhà Handico, Khu đô thị mới Mễ Trì Hạ, đường Phạm Hùng, quận Nam Từ Liêm, TP. Hà Nội.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fci-fci">
+          <div class="fci-item">
+            <div class="fci-img">
+              <img src="/project_image/giayphep.png" alt="">
+            </div>
+            <div class="fci-text">
+              <p>GIẤY PHÉP</p>
+              <p>Giấy phép số 4593/GP-TTĐT do sở TT&TT Hà Nội cấp ngày 31/10/2017</p>
+            </div>
+          </div>
+          <div class="fci-item">
+            <div class="fci-img">
+              <img src="/project_image/nd-man.png" alt="">
+            </div>
+            <div class="fci-text">
+              <p>NGƯỜI CHỊU TRÁCH NHIỆM NỘI DUNG</p>
+              <p>Nguyễn Thị Thu Huyền (Trưởng phòng Truyền Thông - 02437858457 (máy lẻ 126))</p>
+            </div>
+          </div>
+        </div>
+        <div class="fci-fci">
+          <div class="fci-item">
+            <div class="fci-img">
+              <img src="/project_image/contact.png" alt="">
+            </div>
+            <div class="fci-text">
+              <p>LIÊN LẠC</p>
+              <p>024.3785.8457/58 - FAX: 024.3785.8462</p>
+            </div>
+          </div>
+          <div class="fci-item">
+            <div class="fci-img">
+              <img src="/project_image/website.png" alt="">
+            </div>
+            <div class="fci-text">
+              <p>WEBSITE</p>
+              <p><a href="#">www.vpf.vn</a>  <a href="#">www.vnleague.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-end">
+      <div class="fte-text">
+        <p>© 2018 VIETNAM PROFESSIONAL FOOTBALL ALL RIGHTS RESERVED</p>
+      </div>
+      <div class="fte-image">
+        <a href="#"><img src="/project_image/logovpf-footer.jpg" alt=""></a>
+      </div>
+    </div>
+   
+  </footer>
+  <!-- End footer -->
+  
+</body>
+</html>

@@ -1,0 +1,447 @@
+* {
+    padding: 0;
+    margin:  0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+a {
+    text-decoration: none !important;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+html {
+    font-size: 62.5%;
+}
+:root {
+    --box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+    --border-color: #0000007c;
+    --color-tabbedHome: #fff;
+    --main-color: #d41819;
+    --color-linear: linear-gradient(120deg, rgb(0, 238, 255), rgb(205, 7, 250));
+    --color-divider: #8f858579;
+}
+.masthead {
+    position: fixed;
+    z-index: 100;
+    min-height: auto;
+    height: 130px;
+    right: 0;
+    left: 0;
+    top: 0;
+    box-shadow: var(--box-shadow);
+}
+.clubNavigation {
+    padding: 0.8rem 0 0.8rem 20rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background: #fff;
+    position: relative;
+    height: 60px;
+    box-sizing: border-box;
+    position: absolute;
+}
+nav .clubSiteHeader {
+    gap: 0.4rem;
+    min-width: 10rem;
+    font-size: 1.6rem;
+    color: #76766f;
+    font-weight: 600;
+    margin: 0;
+}
+.clubNavigation .clubList {
+    display: flex;
+    gap: 2.5rem;
+    width: 90%;
+    max-width: 130rem;
+    height: 60px;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0.7rem;
+    margin: 0;
+}
+.clubList .clubList__club {
+    border: 1px solid #53505050;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 5px;
+}
+.clubList .clubList__club:hover .badge-image-container img {
+    transform: scale(1.1);
+}
+.clubList__club .badge-image-container {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.clubList__club .badge-image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .15s linear;
+}
+.masthead .logo-container {
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+    width: 13rem;
+    top: 0;
+    z-index: 20;
+    background: #fff;
+}
+.masthead .logo-container .logo {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.masthead .logo-container .logo img {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.masthead .navContainer {
+    position: fixed;
+    width:90%;
+    height: 70px;
+    top: 60px;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 4rem;
+    background: var(--main-color);
+}
+.navContainer .nav-list {
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+}
+.navContainer .nav-list li {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.2rem 0;
+    position: relative;
+}
+.navContainer .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+.masthead .navContainer .nav-list li::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    bottom: -0.5rem;
+    background: #fff;
+    transform: translateY(1rem);
+    transition: all .35s ease;
+    opacity: 0;
+}
+.masthead .navContainer .nav-list .active::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+.masthead .navContainer .nav-list li:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.navContainer a {
+    color: #000;
+}
+.navContainer-right {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.navContainer-right div {
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 600;
+}
+.navContainer-right .navContainer-more {
+    border-radius: 2px;
+    position: relative;
+}
+.navContainer-right .navContainer-more p {
+    margin: 0;
+}
+.navContainer-right .navContainer-user {
+    border: 1px solid var(--border-color);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+}
+.navContainer-right .navContainer-search {
+    border: 1px solid var(--border-color);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+} 
+.navContainer-right .navContainer-search i {
+    position: absolute;
+}
+.navContainer-right .navContainer-search .fa-xmark {
+    font-size: 3rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #000;
+    display: none;
+}
+
+.navContainer-right .navContainer-user:hover,
+.navContainer-right .navContainer-search:hover {
+    opacity: .8;
+}
+.navContainer-more p {
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.navContainer-more .submore{
+    display: none;
+    position: absolute;
+    width: 30rem;
+    background-color: #ff0000;
+    transform: translateX(-40%);
+    top: 4rem;
+    padding: 0;
+    margin: 0;
+}
+.navContainer-more .submore::before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-bottom: 10px solid #ff0000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navContainer-more .submore li {
+    position: relative;
+    padding: 1rem 4rem;
+    font-weight: lighter;
+    transition: all .25s ease;
+}
+.navContainer-more .submore li:hover {
+    background: #fff;
+}
+.navContainer-more .submore li a {
+    font-size: 1.6rem;
+    transition: color .25s ease;
+    color: #fff;
+}
+.navContainer-more .submore li:hover a{
+    color: black;
+}
+.navContainer-more:hover .submore {
+    display: block;
+}
+.divider {
+    height: 30px;
+    width: 1px;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.5);
+}
+.search-container {
+    position: fixed;
+    height: calc(100vh - 130px);
+    top: -100%;
+    background: whitesmoke;
+    right: 0;
+    left: 0;
+    z-index: 111;
+    transition: 0.3s linear;
+}
+.search-smaller {
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 2rem;
+}
+.search-smaller .search-label {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1rem 0 0;
+    border-radius: 5px;
+    position: relative;
+}
+.search-smaller .search-label .divide-search {
+    height: 60%;
+    width: 1px;
+    border-radius: 3px;
+    background-color: var(--color-divider);
+    position: absolute;
+    right: 5rem;
+}
+.search-smaller .search-label input {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    border: 1px solid #3333332d;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(72, 17, 87);
+    box-sizing: border-box;
+    padding: 0 0 0 1rem;
+    position: absolute;
+}
+.search-smaller .search-label input:focus {
+    border: 1px solid var(--main-color);
+}
+.search-smaller .search-label i {
+    font-size: 2.5rem;
+    color: #000;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+.search-smaller .search-label i:hover {
+    color: var(--main-color);
+}
+.suggestedInfor-list,
+.suggestedPlayers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.suggestedSearch h2 {
+    font-size: 3rem;
+    padding: 3rem 0;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(103, 2, 126);
+    position: relative;
+}
+.suggestedSearch h2::after {
+    position: absolute;
+    width: 3%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    display: block;
+    content: "";
+}
+
+.suggestedSearch a p {
+    color: rgb(72, 17, 87);
+    font-size: 1.6rem;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    border-radius: 5px;
+    background: radial-gradient(rgb(235, 231, 231),whitesmoke);
+    transition: 0.2s ease;
+}
+.suggestedSearch a p:hover {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.886) 60%,rgba(0, 255, 255, 0.508));
+    color: #fff;
+}
+.suggested-divide {
+    width: 100%;
+    height: 0.3px;
+    background-color: var(--color-divider);
+    margin-top: 4rem;
+}
+@media screen and (max-width: 767px) {
+    .clubNavigation {
+        display:  none;
+    }
+    .navContainer .nav-list {
+        display: none;
+    }
+    .navContainer-right {
+        right: 2rem;
+        position: absolute;
+        bottom: 0;
+    }
+    .masthead {
+        height: 100px;
+        display: none;
+    }
+    .navContainer {
+        margin-top: -35px;
+        max-width: 767px;
+        z-index: -11;
+    }
+    .sideBar{
+        display: none;
+    }
+    .table-container {
+        display: none;
+    }
+    .news {
+        width: 100%;
+        display: block;
+    }
+    .main-news {
+        width: 400px;
+        height: 300px;
+    }
+    .main-news h2 {
+        font-size: 1.6rem;
+    }
+    .sub-news {
+        width: 370px;
+        height: 650px;
+        margin-top: 2.5rem;
+    }
+    .sub-news-image {
+        width: 100%;
+    }
+    .search-container .suggestedPlayers-list{
+        display: none;
+        
+    }
+    .search-container {
+        margin-top: -30px;
+    }
+    .navContainer-more {
+        display: none;
+    }
+}
